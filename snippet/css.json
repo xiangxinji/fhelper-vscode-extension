@@ -1,0 +1,18 @@
+{
+    "生成水平垂直居中" : {
+        "prefix" : "fgfcenter" , 
+        "body" : [
+            "display:flex;",
+            "justify-content:center;",
+            "align-items:center"
+        ]
+    },
+    "生成一个圆" : {
+        "prefix" : "fgcircle" , 
+        "body" : [
+            "width:$1;",
+            "height:$1;",
+            "border-radius:50%"
+        ]
+    }
+}
