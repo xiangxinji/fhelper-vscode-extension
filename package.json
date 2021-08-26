@@ -3,7 +3,7 @@
 	"displayName": "fhelper",
 	"description": "前端基础代码扩展",
 	"version": "0.0.2",
-	"icon": "images/logo.png",
+	"icon": "https://img03.sogoucdn.com/app/a/100520146/dec1f9a99fae4cf650dacdd86dd3d931",
 	"engines": {
 		"vscode": "^1.59.0"
 	},
