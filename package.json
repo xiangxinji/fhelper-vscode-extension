@@ -1,9 +1,9 @@
 {
-	"name": "fhelper",
-	"displayName": "fhelper",
-	"description": "前端基础代码扩展",
+	"name": "FHelper",
+	"displayName": "FHelper",
+	"description": "front end common function expansion",
 	"publisher": "xjxiang",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.59.0"
