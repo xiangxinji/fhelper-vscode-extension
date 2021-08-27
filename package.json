@@ -11,9 +11,18 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
+	"activationEvents": [
+		"onCommand:extension.runScript"
+	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "extension.runScript",
+				"title": "running in package.json script",
+				"category": "FHelper"
+			}
+		],
 		"snippets": [
 			{
 				"language": "javascript",
