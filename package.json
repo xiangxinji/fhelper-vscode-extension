@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.runScript"
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -26,7 +26,7 @@
 		"commands": [
 			{
 				"command": "extension.runScript",
-				"title": "running in package.json script",
+				"title": "使用 npm 运行项目",
 				"category": "FHelper"
 			}
 		],
