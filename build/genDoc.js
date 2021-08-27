@@ -40,3 +40,6 @@ const readme = fs.readFileSync(templatePath, 'utf-8')
 const result = readme.replace('<!--snippet-->', snippetDocBlock)
 
 fs.writeFileSync(readmePath, result)
+
+
+
