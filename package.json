@@ -3,7 +3,7 @@
 	"displayName": "fhelper",
 	"description": "前端基础代码扩展",
 	"publisher": "xjxiang",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.59.0"
@@ -16,6 +16,13 @@
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"keybindings" : [
+			{
+				"command": "extension.runScript",
+				"key": "ctrl+shift+h",
+				"mac": "cmd+shift+h"
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.runScript",

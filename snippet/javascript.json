@@ -13,6 +13,14 @@
             "})"
         ]
     },
+    "生成查询函数" : {
+        "prefix": "fgsearch", 
+        "body": [
+            "function $1(value,array){" , 
+            "   return array.filter((item) => item$2 == value)" ,
+            "}"
+        ]
+    },
     "生成去重函数": {
         "prefix": "fgunique",
         "body": [

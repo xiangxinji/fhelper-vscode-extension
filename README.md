@@ -3,6 +3,13 @@
 封装一些前端常用的代码 
 
 
+## 运行 npm script 
+
+可以直接呼出 vscode 命令面板 查询FHelper 并运行 running script 命令 
+
+可以使用快捷键 **win:ctrl+shift+h** , **mac: cmd+shift+h**
+
+
 ## snippet 代码支持
 ### css
 
@@ -46,6 +53,17 @@ console.log($1)
 new Promise(function (resolve , reject){
    $1
 })
+```
+
+
+指令作用:生成查询函数
+
+
+指令前缀: fgsearch
+```javascript
+function $1(value,array){
+   return array.filter((item) => item$2 == value)
+}
 ```
 
 
