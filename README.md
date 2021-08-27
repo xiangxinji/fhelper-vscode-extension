@@ -43,7 +43,7 @@ console.log($1)
 
 指令前缀: fnpromise
 ```javascript
-new Promise((resolve , reject) => {
+new Promise(function (resolve , reject){
    $1
 })
 ```
@@ -100,5 +100,69 @@ function dateFormat (fmt , date ) {
    }
    return fmt; 
 } 
+```
+
+
+指令作用:生成 for 语句
+
+
+指令前缀: fgfor
+```javascript
+for(let i = 0; i < $1.length ; i ++) {
+   $2
+}
+```
+
+
+指令作用:生成 forEach 方法
+
+
+指令前缀: fgforeach
+```javascript
+$1.forEach(function (item) {
+   $2
+})
+```
+
+
+指令作用:导入 vue3 
+
+
+指令前缀: fivue3
+```javascript
+import { $1 } from 'vue'
+```
+
+### vue
+
+指令作用:生成一个 defineComponent 组件
+
+
+指令前缀: fvdefinec
+```vue
+<template>
+
+</template>
+<script>
+import { defineComponent } from 'vue'
+export default defineComponent({
+   $1
+})
+</script>
+```
+
+
+指令作用:生成一个 setup script 组件
+
+
+指令前缀: fvsetups
+```vue
+<template>
+
+</template>
+<script setup>
+import { $1 } from 'vue'
+$2
+</script>
 ```
 

@@ -1,0 +1,29 @@
+{
+    "生成一个 defineComponent 组件": {
+        "prefix": "fvdefinec",
+        "body": [
+            "<template>",
+            "" , 
+            "</template>",
+            "<script>",
+            "import { defineComponent } from 'vue'",
+            "export default defineComponent({",
+            "   $1" , 
+            "})",
+            "</script>"
+        ]
+    },
+    "生成一个 setup script 组件": {
+        "prefix": "fvsetups",
+        "body": [
+            "<template>",
+            "" , 
+            "</template>",
+            "<script setup>",
+            "import { $1 } from 'vue'",
+            "$2" , 
+            "</script>"
+        ]
+    }
+
+}
