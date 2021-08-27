@@ -1,70 +1,104 @@
-# fhelper README
+# FHelper 
 
-This is the README for your extension "fhelper". After writing up a brief description, we recommend including the following sections.
+封装一些前端常用的代码 
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## snippet 代码支持
+### css
 
-For example if there is an image subfolder under your extension project workspace:
+指令作用:生成水平垂直居中
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+指令前缀: fgfcenter
+```css
+display:flex;
+justify-content:center;
+align-items:center
+```
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+指令作用:生成一个圆
 
-## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+指令前缀: fgcircle
+```css
+width:$1;
+height:$1;
+border-radius:50%
+```
 
-For example:
+### javascript
 
-This extension contributes the following settings:
+指令作用:打印 console.log
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
-## Known Issues
+指令前缀: cl
+```javascript
+console.log($1)
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
-## Release Notes
+指令作用:生成 new Prmoise
 
-Users appreciate release notes as you update your extension.
 
-### 1.0.0
+指令前缀: fnpromise
+```javascript
+new Promise((resolve , reject) => {
+   $1
+})
+```
 
-Initial release of ...
 
-### 1.0.1
+指令作用:生成去重函数
 
-Fixed issue #.
 
-### 1.1.0
+指令前缀: fgunique
+```javascript
+function unique ( arr ) {
+   return Array.from(new Set(arr))
+}
+```
 
-Added features X, Y, and Z.
 
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
+指令作用:生成递归函数
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+指令前缀: fgrecursion
+```javascript
+function $1 ( item ) {
+   if(item.children.length) {
+      for(let i = 0 ; i < item.children.length  ; i ++){
+           $1(item.children[i])
+      }
+   }
+}
+```
 
-## Working with Markdown
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+指令作用:生成格式化时间函数
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
 
-### For more information
+指令前缀: fgformatdate
+```javascript
+function dateFormat (fmt , date ) {
+   var o = { 
+       'M+' : date.getMonth()+1,
+       'd+' : date.getDate(),  
+       'H+' : date.getHours(),
+       'm+' : date.getMinutes(),
+       's+' : date.getSeconds(),       
+       'q+' : Math.floor((date.getMonth()+3)/3), 
+       'S'  : date.getMilliseconds()            
+   };
+   if(/(y+)/.test(fmt)) {
+       fmt=fmt.replace(RegExp.\$1, (date.getFullYear()+'').substr(4 - RegExp.\$1.length)); 
+   }
+   for(var k in o) {
+       if(new RegExp('('+ k +')').test(fmt)){
+           fmt = fmt.replace(RegExp.\$1, (RegExp.\$1.length==1) ? (o[k]) : (('00'+ o[k]).substr((''+ o[k]).length)));
+       }
+   }
+   return fmt; 
+} 
+```
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
